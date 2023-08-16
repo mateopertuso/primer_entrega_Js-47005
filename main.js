@@ -1,3 +1,48 @@
+console.log('Serás atendido por un asistente mayor.');
+
+let asistentes = [
+    {
+        name: 'Mateo',
+        edad: 22,
+    },
+    {
+        name: 'Gaston',
+        edad: 18,
+    },
+    {
+        name: 'Priscila',
+        edad: 16,
+    },
+    {
+        name: 'Luana',
+        edad: 25,
+    },
+    {
+        name: 'Bautista',
+        edad: 17,
+    },
+    {
+        name: 'Agustina',
+        edad: 29,
+    }
+];
+
+
+let approved = asistentes.filter(asistent => asistent.edad >= 18);
+console.log(approved)
+
+console.log('A continuación podrás saber más acerca de él.');
+
+let asistente = {
+    nombre: "Mateo Pertuso",
+    edad: 22,
+    direccion: "Canelones, Uruguay",
+    telefono: 59899743316,
+};
+
+console.log("Usted será atendido por");
+console.log(asistente);
+
 function calcularCostoTotal() {
     alert('Bienvenido|a a la tienda, continúemos con la compra!');
 
@@ -10,22 +55,22 @@ function calcularCostoTotal() {
     -Accesorios`);
 
     switch (tipoPrenda) {
-        case "Remeras" .toLowerCase():
+        case "Remeras".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
-        case "Pantalones" .toLowerCase():
+        case "Pantalones".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
-        case "Camperas" .toLowerCase():
+        case "Camperas".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
-        case "Calzado" .toLowerCase():
+        case "Calzado".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
-        case "Camisas" .toLowerCase():
+        case "Camisas".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
-        case "Accesorios" .toLowerCase():
+        case "Accesorios".toLowerCase():
             alert(`Perfecto, continuemos eligiendo la cantidad :)`);
             break;
         default:
@@ -59,4 +104,36 @@ function calcularCostoTotal() {
     alert(`El costo total de los productos es: $${costoTotal.toFixed(2)}`);
 }
 calcularCostoTotal()
+
+
+const productos = [
+    { id: 1, nombre: "taza" },
+    { id: 2, nombre: "pelota" },
+    { id: 3, nombre: "botella" },
+];
+
+let nombre = prompt(`Te queremos obsequiar con un producto por la compra, podes elegir entre: 
+    -taza
+    -pelota
+    -botella`);
+
+let producto;
+
+for (const item of productos) {
+    if (item.nombre === nombre) {
+        producto = item;
+    }
+}
+
+if (producto) {
+    let mensaje = `
+      ID: ${producto.id}
+      Nombre: ${producto.nombre}
+      MUCHAS GRACIAS POR LA COMPRA!
+    `;
+
+    alert(mensaje);
+} else {
+    alert("El producto no se ha encontrado en la lista");
+}
 
