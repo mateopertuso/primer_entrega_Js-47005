@@ -165,6 +165,17 @@ productos.forEach((product) => {
     content.append(comprar);
 
     comprar.addEventListener("click", () => {
+
+        //alert
+        Swal.fire({
+            title: 'Perfecto!',
+            text: `Agregamos ${product.nombre} al carrito.`,
+            imageUrl: product.img,
+            imageWidth: 150,
+            imageHeight: 150,
+            imageAlt: product.nombre,
+        })
+        
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
 
         if (repeat) {
@@ -195,7 +206,7 @@ const saveLocal = () => {
 };
 
 function obtenerJsonPropio1() {
-    const URLJSON = "C:\Users\Mateo\OneDrive\Escritorio\Mis proyectos\ECOMMERCE-CODER\server.json";
+    const URLJSON = "https://raw.githubusercontent.com/mateopertuso/primer_entrega_Js-47005/main/server.json";
     fetch(URLJSON)
         .then(resp => resp.json())
         .then((data) => {
