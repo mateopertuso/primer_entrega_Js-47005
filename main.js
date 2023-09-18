@@ -193,3 +193,30 @@ productos.forEach((product) => {
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
+function obtenerJsonPropio1() {
+    const URLJSON = "C:\Users\Mateo\OneDrive\Escritorio\Mis proyectos\ECOMMERCE-CODER\server.json";
+    fetch(URLJSON)
+        .then(resp => resp.json())
+        .then((data) => {
+            console.log(data.productosShop);
+            const listaProductos = data.productosShop; //esto es un array
+            console.log(listaProductos);
+
+            listaProductos.forEach(shop => {
+                document.getElementById('shop-productos').innerHTML += `
+                <tr>
+                <td>${shop.prenda}</td>
+                <td>${shop.talle}</td>
+                <td>${shop.color}</td>
+                <td>${shop.stock}</td>
+                </tr>
+            `;
+            });
+
+        })
+        .catch((error) => console.log(error));
+
+}
+
+obtenerJsonPropio1();

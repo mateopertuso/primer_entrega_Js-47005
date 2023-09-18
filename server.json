@@ -1,0 +1,33 @@
+
+{
+    "productosShop": [{
+            "prenda": "Remera",
+            "talle": "M",
+            "color": "Blanco",
+            "stock": 20
+        },
+        {
+            "prenda": "Campera",
+            "talle": "L",
+            "color": "Gris",
+            "stock": 14
+        },
+        {
+            "prenda": "Pantalon",
+            "talle": 32,
+            "color": "jean",
+            "stock": 16
+        },
+        {
+            "prenda": "Zapatos",
+            "talle": "41",
+            "color": "Blancos",
+            "stock": 23
+        },
+        {
+            "prenda": "Mochila",
+            "color": "Rojo",
+            "stock": 18
+        }
+    ]
+}
